@@ -1,0 +1,46 @@
+
+#include<stdio.h>
+int main() {
+    // Declare variables for student details and marks
+    char name[100];
+    int admission_number;
+    float maths, kiswahili, english, science, social_studies, cre;
+    float average;
+
+    // Input the student's name and admission number
+    printf("Enter student name: ");
+    fgets(name, sizeof(name), stdin);  // To allow spaces in the name
+    
+    printf("Enter admission number: ");
+    scanf("%d", &admission_number);
+
+    // Input the marks for each subject
+    printf("Enter marks for Maths: ");
+    scanf("%f", &maths);
+
+    printf("Enter marks for Kiswahili: ");
+    scanf("%f", &kiswahili);
+
+    printf("Enter marks for English: ");
+    scanf("%f", &english);
+
+    printf("Enter marks for Science: ");
+    scanf("%f", &science);
+
+    printf("Enter marks for Social Studies: ");
+    scanf("%f", &social_studies);
+
+    printf("Enter marks for CRE: ");
+    scanf("%f", &cre);
+
+    // Calculate the average mark
+    average = (maths + kiswahili + english + science + social_studies + cre) / 6;
+
+    // Output the student information and average mark
+    printf("\nStudent Information:\n");
+    printf("Name: %s", name);
+    printf("Admission Number: %d\n", admission_number);
+    printf("Average Mark: %.2f\n", average);
+
+    return 0;
+}
